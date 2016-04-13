@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<style>
+    .imageRotation{
+        animation: rrrr 15s;
+    }
+    @keyframes rrrr {
+        0% {transform:translate(0%,0px);}
+        25% {transform:translate(-100%,0px);}
+        50% {transform:translate(-200%,0px);}
+        75%{transform:translate(-300%,0px);}
+        100%{transform:translate(0%,0px);}
+    }
+    .imageBox{
+        position:absolute;
+        width:100%;
+        height:100%;
+    }
+    .imageBox img{
+        width:100%;
+        height:100%;
+    }
+</style>
+<body>
+   <div class="container">
+    <h1>轮播图</h1>
+       <div style="position:relative;width:500px;height:300px;overflow:hidden">
+    <div class="imageRotation" style="transform:translate(-100%,0px);height: 100%;">
+        <div class="imageBox" style="left:0;" >
+            <img src="img/num1.jpeg" alt="花">
+        </div>
+        <div class="imageBox" style="left:100%">
+            <img src="img/num2.jpg"  alt="小清新">
+    </div>
+       <div class="imageBox" style="left:200%">
+            <img src="img/num3.jpg"  alt="小清新">
+    </div>
+       <div class="imageBox" style="left:300%">
+            <img src="img/num4.jpg"  alt="小清新">
+        </div>
+        <div class="icoBox">
+            <a href="javascript:;" class="active">1</a>
+            <a href="javascript:;" class>2</a>
+            <a href="javascript:;" class>3</a>
+            <a href="javascript:;" class>4</a>
+        </div>
+    </div>
+       </div>
+       </div>
+    <script src="js/util.js"></script>
+    <script src="js/task0002_3.js"></script>
+</body>
+</html>

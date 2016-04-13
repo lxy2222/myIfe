@@ -1,0 +1,87 @@
+.container{
+    margin:0 auto;
+    max-width:1000px;
+}
+.warn{
+    display:none;
+    color:red;
+    background-color:#DEE8EF;
+    width:290px;
+    padding:5px;
+}
+textarea{
+    margin-bottom:10px;
+    display:block;
+}
+.show{
+    margin-bottom:10px;
+}
+input{
+    cursor:auto;
+    padding:1px;
+}
+.imageRotation{
+    height:300px;
+    width:500px;
+    overflow:hidden;/*--超出容器的元素都不可见--*/
+    position:relative;
+
+}
+.imageBox{
+    position:relative;
+    overflow:hidden;
+    width:2500px;
+}
+.icoBox{
+    position:absolute;
+    left:50%;
+    bottom:4px;
+    margin-left:-50px;
+}
+.icoBox a{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    border:1px solid #aaaaaa;
+}
+.active{
+    background-color:#aaaaaa;
+    cursor:default;
+}
+.imageBox img{
+    display:block;
+    height:300px;
+    width:500px;
+    float:left;
+}
+.drag-block{
+    position:relative;
+    width:800px;
+    border:1px solid black;
+    padding:20px 50px;
+}
+.block{
+    position:relative;
+    width:200px;
+    height:480px;
+    border:1px solid #000000;
+}
+.left-block{
+    float:left;
+}
+.right-block{
+    float: right;
+}
+.move{
+    width:200px;
+    height:59px;
+    border-bottom:1px solid #000000;
+    background-color:lightpink;
+    cursor:move;
+}
+
+.drag-block > .move {
+    position: fixed;
+}
+

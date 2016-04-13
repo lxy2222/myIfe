@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>hello world</p>
+</body>
+<script>
+    function getPosition(element){
+        var pos = {};
+        pos.x = element.getBoundingClientRect().left+Math.max(document.documentElement.scrollLeft,document.body.scrollLeft);
+        pos.y = element.getBoundingClientRect().top + Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+        return pos;
+    }
+    var box = document.getElementsByTagName("p");
+    console.log(getPosition(box));
+</script>
+</html>

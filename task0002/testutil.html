@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <ul>
+       <li id="doma">111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <script type="text/javascript">
+        function addEvent(element,event,listener){
+            if(element.addEventListener)
+            {
+                element.addEventListener(event,listener);
+            }
+            else if(element.attachEvent){
+                element.attachEvent('on'+event,listener);
+            }
+
+        }
+        function removeEvent(element,event,listener){
+            if(element.removeEventListener){
+                element.removeEventListener(event,listener);
+            }
+            else if(element.detachEvent){
+                element.detachEvent(event,listener);
+            }
+        }
+        function a(){
+            alert("hello");
+        }
+
+    </script>
+</body>
+</html>

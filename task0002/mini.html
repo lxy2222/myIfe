@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <script src="js/util.js"></script>
+</head>
+<body>
+	<a href="www.baidu.com">百度一下</a>
+	<ul id="adom">
+          <li class="classa">111</li>
+          <li data-log="dd">222</li>
+          <li data-time=2015>333</li>
+    </ul>
+    <ul id="list">
+        <li id="item1">Simon</li>
+        <li id="item2">Kenner</li>
+        <li id="item3">Erik</li>
+    </ul>
+    <input >
+<script type="text/javascript"  >
+//    function $(selector){
+//        if(!selector){
+//            return null;
+//        }
+//        if(selector === document)
+//            return document;
+//        selector = selector.trim();//去掉空格
+//        // selector = trim(selector);
+//        if(~selector.indexOf(" ")){
+//            var selectorArray = selector.split("/\s+/");//根据空格把属性分割开
+//            var rootScope = myQuery(selectorArray[0])
+//            var result = [];
+//            for(var i= 1;i < selectorArray.length;i++)
+//                for(var j=0;j < rootScope.length;j++)
+//                {
+//                    result.push(myQuery(selectorArray[i],rootScope[j]))
+//                }
+//            console.log(result);
+//            return result[0][0];//返回第一个节点
+//
+//        }
+//        else{
+//            return myQuery(selector,document)[0];
+//        }
+//    }
+//    function myQuery(selector,root){
+//        var allChildren  = null;//初始化所有子节点
+//        var result = [];
+//        var content = selector.substr(1);//去掉标识符后的所有字符
+//        var currAttr = null;
+//        root = root || document;
+//        switch(selector[0]){
+//            case "#":
+//                result.push(document.getElementById(content));
+//                break;
+//            case ".":
+//                //先获取所有元素
+//                allChildren = root.getElementsByTagName("*");
+//                for(var i = 0;i < allChildren.length;i++)
+//                {
+//                    currAttr = allChildren[i].getAttribute("class");
+//                    //如果是多个属性的
+//                    if(currAttr != null){
+//                        var currAttrs = currAttr.split("/\s+/");
+//                        for(var j = 0;j < currAttrs.length;j++)//按照属性查找
+//                        {
+//                            if(content === currAttrs[j])
+//                            {
+//                                result.push(allChildren[i]);
+//                                console.log(result);
+//                            }
+//                        }
+//                    }
+//                }
+//                //result.push(document.getElementsByClassName(content));
+//                break;
+//            case "[":
+//                //allChildren = root.getElementsByTagName("*");
+//                if(content.search("=") == -1){
+//                    //遍历所有节点,然后找是否有属性
+//                    //只有属性没有值的情况下
+//                    allChildren = root.getElementsByTagName("*");
+//                    for(var i = 0;i < allChildren.length;i++)
+//                    {
+//                        if(allChildren[i].getAttribute(selector.slice(1,-1)!== null))
+//                        { result.push(allChildren[i]);}
+//                    }
+//
+//                }
+//                else{
+//                    //分离等号前后内容
+//                    allChildren = root.getElementsByTagName("*");
+//                    var pattern = /\[(.+)=(.+)\]/;//=并不是关键字
+//                    var currAttrStr = selector.match(pattern);
+//                    var key = currAttrStr[0];
+//                    var value = currAttrStr[1];
+//                    for(var i = 0;i < allChildren.length;i++)
+//                    {
+//                        if(allChildren[i].getAttribute(key) === value)
+//                        { result.push(allChildren[i]);}
+//                    }
+//                }
+//                break;
+//            default://tag
+//                result = root.getElementsByTagName(selector);
+//                break;
+//        }
+//        return result;
+//    }
+function a(){
+    alert("hello world");
+}
+function clickListener(){
+    console.log("hi");
+}
+
+$.delegate = delegateEvent;
+$.on = addEvent;
+$.un = removeEvent;
+$.delegate("#list","li","click",clickListener);
+
+var doma = $(".classa");
+$.on(doma,"click",a);
+
+removeEvent(doma,"click",a);
+var ipt = document.getElementsByTagName("input")[0];//用enter的时候必须要有聚焦
+addEnterEvent(ipt,a);//因为没有焦点
+addClickEvent(doma,a);
+</script>
+
+</body>
+</html>
